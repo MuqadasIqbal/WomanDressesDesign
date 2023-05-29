@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Activities.CategoryNameActivity">
+
+    <View
+        android:id="@+id/categoriesView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/stroke"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:fontFamily="serif"
+        android:text="Category Name"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/categoriesView"
+        app:layout_constraintStart_toStartOf="@+id/categoriesView"
+        app:layout_constraintTop_toTopOf="@+id/categoriesView" />
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoriesView"
+        app:riv_border_color="#333333"
+        app:riv_border_width="2dip"
+        app:riv_corner_radius="30dip" />
+
+
+    <ImageButton
+        android:id="@+id/shareApp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/solid"
+        app:layout_constraintBottom_toBottomOf="@+id/saved"
+        app:layout_constraintEnd_toStartOf="@+id/rightArrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/saved"
+        app:layout_constraintTop_toTopOf="@+id/saved" />
+
+
+
+
+    <ImageButton
+        android:id="@+id/share"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@+id/shareApp"
+        app:layout_constraintEnd_toEndOf="@+id/shareApp"
+        app:layout_constraintStart_toStartOf="@+id/shareApp"
+        app:layout_constraintTop_toTopOf="@+id/shareApp" />
+
+    <ImageButton
+        android:id="@+id/saved"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+
+        android:background="@drawable/solid"
+        app:layout_constraintBottom_toBottomOf="@+id/leftArrow"
+        app:layout_constraintEnd_toStartOf="@+id/shareApp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/leftArrow"
+        app:layout_constraintTop_toTopOf="@+id/leftArrow" />
+
+    <ImageButton
+        android:id="@+id/rightArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+
+        android:background="@drawable/solid"
+        app:layout_constraintBottom_toBottomOf="@+id/shareApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shareApp"
+        app:layout_constraintTop_toTopOf="@+id/shareApp" />
+
+    <ImageButton
+        android:id="@+id/leftArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/solid"
+        app:layout_constraintEnd_toStartOf="@+id/saved"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+    <ImageButton
+        android:id="@+id/savedimg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bookmarks"
+        app:layout_constraintBottom_toBottomOf="@+id/saved"
+        app:layout_constraintEnd_toEndOf="@+id/saved"
+        app:layout_constraintStart_toStartOf="@+id/saved"
+        app:layout_constraintTop_toTopOf="@+id/saved" />
+
+    <ImageButton
+        android:id="@+id/Arrowimg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/left"
+        app:layout_constraintBottom_toBottomOf="@+id/leftArrow"
+        app:layout_constraintEnd_toEndOf="@+id/leftArrow"
+        app:layout_constraintStart_toStartOf="@+id/leftArrow"
+        app:layout_constraintTop_toTopOf="@+id/leftArrow" />
+
+    <ImageButton
+        android:id="@+id/rightArrowimg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/right"
+        app:layout_constraintBottom_toBottomOf="@+id/rightArrow"
+        app:layout_constraintEnd_toEndOf="@+id/rightArrow"
+        app:layout_constraintStart_toStartOf="@+id/rightArrow"
+        app:layout_constraintTop_toTopOf="@+id/rightArrow" />
+</androidx.constraintlayout.widget.ConstraintLayout>
