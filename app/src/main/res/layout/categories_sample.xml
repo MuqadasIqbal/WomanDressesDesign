@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <View
+        android:id="@+id/mahndiView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/stroke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="180dp"
+        android:layout_height="138dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/mndhi"
+
+        app:layout_constraintBottom_toBottomOf="@+id/mahndiView"
+        app:layout_constraintStart_toStartOf="@+id/mahndiView"
+        app:layout_constraintTop_toTopOf="@+id/mahndiView" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="138dp"
+        android:background="@color/shadow"
+        android:padding="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mahndi Dresses Designs"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/mahndiView"
+        app:layout_constraintEnd_toEndOf="@+id/mahndiView"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="@+id/mahndiView"
+        app:layout_constraintTop_toTopOf="@+id/mahndiView"
+        app:layout_constraintVertical_bias="0.474" />
+
+    <View
+        android:id="@+id/mandhiview"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circlestroke"
+        app:layout_constraintBottom_toBottomOf="@+id/mahndiView"
+        app:layout_constraintEnd_toEndOf="@+id/mahndiView"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toEndOf="@+id/textName"
+        app:layout_constraintTop_toTopOf="@+id/mahndiView" />
+
+    <TextView
+        android:id="@+id/categoryArrow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/right_arrow__1_"
+        app:layout_constraintBottom_toBottomOf="@id/mandhiview"
+        app:layout_constraintEnd_toEndOf="@id/mandhiview"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@id/mandhiview"
+        app:layout_constraintTop_toTopOf="@+id/mandhiview" />
+</androidx.constraintlayout.widget.ConstraintLayout>

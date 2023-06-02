@@ -1,6 +1,7 @@
 package com.example.womandressdesigns.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,9 +9,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.womandressdesigns.Activities.AllCategories;
+import com.example.womandressdesigns.Activities.CategoryNameActivity;
 import com.example.womandressdesigns.ModelClass.categoryModel;
 import com.example.womandressdesigns.R;
-import com.example.womandressdesigns.databinding.CategorySampleBinding;
+import com.example.womandressdesigns.databinding.CategoriesSampleBinding;
 
 import java.util.ArrayList;
 
@@ -18,7 +21,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.viewHo
     ArrayList<categoryModel>list;
     Context context;
 
-    public CategoryAdapter(ArrayList<categoryModel> list) {
+    public CategoryAdapter(ArrayList<categoryModel> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -26,14 +29,26 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.viewHo
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.category_sample,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.categories_sample,parent,false);
         return new viewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         categoryModel model=list.get(position);
-        holder.binding.imageView1.setImageResource(model.getImage());
+        holder.binding.image.setImageResource(model.getImage());
+        holder.binding.textName.setText(model.getName());
+
+        holder.binding.categoryArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, CategoryNameActivity.class);
+                intent.putExtra("name",model.getName());
+                context.startActivity(intent);
+
+            }
+        });
+
     }
 
     @Override
@@ -42,10 +57,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.viewHo
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
-        CategorySampleBinding binding;
+        CategoriesSampleBinding binding;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            binding=CategorySampleBinding.bind(itemView);
+            binding=CategoriesSampleBinding.bind(itemView);
         }
     }
 }

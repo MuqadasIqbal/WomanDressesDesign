@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.womandressdesigns.AllCategories;
 import com.example.womandressdesigns.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {

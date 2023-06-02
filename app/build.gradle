@@ -48,4 +48,5 @@ dependencies {
 
   /*  //Slider
     implementation project(':autoimageslider')*/
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
 }

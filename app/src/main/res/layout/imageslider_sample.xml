@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -20,4 +21,25 @@
         app:riv_border_color="#333333"
         app:riv_border_width="2dip"
         app:riv_corner_radius="30dip" />
+
+    <ImageButton
+        android:id="@+id/saved"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/solid"
+        app:layout_constraintEnd_toEndOf="@+id/imageView1"
+        app:layout_constraintTop_toTopOf="@+id/imageView1" />
+
+    <ImageButton
+        android:id="@+id/savedimg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/bookmarks"
+        app:layout_constraintBottom_toBottomOf="@+id/saved"
+        app:layout_constraintEnd_toEndOf="@+id/saved"
+        app:layout_constraintStart_toStartOf="@+id/saved"
+        app:layout_constraintTop_toTopOf="@+id/saved" />
 </androidx.constraintlayout.widget.ConstraintLayout>

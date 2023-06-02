@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/finalImage"
     android:background="@drawable/background"
     tools:context=".Activities.CategoryNameActivity">
 
@@ -16,19 +17,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/categoryNameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16sdp"
         android:fontFamily="serif"
+        android:gravity="center"
         android:text="Category Name"
         android:textColor="@color/white"
         android:textSize="25sp"
-        android:gravity="center"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/categoriesView"
         app:layout_constraintStart_toStartOf="@+id/categoriesView"
         app:layout_constraintTop_toTopOf="@+id/categoriesView" />
-    <com.makeramen.roundedimageview.RoundedImageView
+<!--    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_400sdp"
@@ -43,21 +45,38 @@
         app:layout_constraintTop_toBottomOf="@id/categoriesView"
         app:riv_border_color="#333333"
         app:riv_border_width="2dip"
-        app:riv_corner_radius="30dip" />
+        app:riv_corner_radius="30dip" />-->
+    <com.smarteist.autoimageslider.SliderView
 
+        android:id="@+id/imageSlider"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoriesView"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="false"
+
+
+       />
 
     <ImageButton
         android:id="@+id/shareApp"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:background="@drawable/solid"
         app:layout_constraintBottom_toBottomOf="@+id/saved"
         app:layout_constraintEnd_toStartOf="@+id/rightArrow"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/saved"
-        app:layout_constraintTop_toTopOf="@+id/saved" />
+        app:layout_constraintTop_toTopOf="@+id/saved"
+        app:sliderScrollTimeInSec="1"
+        app:sliderStartAutoCycle="false"/>
 
 
 
@@ -76,8 +95,7 @@
         android:id="@+id/saved"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-
+        android:layout_marginStart="@dimen/_16sdp"
         android:background="@drawable/solid"
         app:layout_constraintBottom_toBottomOf="@+id/leftArrow"
         app:layout_constraintEnd_toStartOf="@+id/shareApp"
@@ -89,8 +107,7 @@
         android:id="@+id/rightArrow"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-
+        android:layout_marginStart="@dimen/_16sdp"
         android:background="@drawable/solid"
         app:layout_constraintBottom_toBottomOf="@+id/shareApp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,20 +119,18 @@
         android:id="@+id/leftArrow"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-
+        android:layout_marginTop="@dimen/_16sdp"
         android:background="@drawable/solid"
         app:layout_constraintEnd_toStartOf="@+id/saved"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+        app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
 
     <ImageButton
         android:id="@+id/savedimg"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginTop="8dp"
         android:background="@drawable/bookmarks"
         app:layout_constraintBottom_toBottomOf="@+id/saved"
         app:layout_constraintEnd_toEndOf="@+id/saved"
@@ -126,7 +141,6 @@
         android:id="@+id/Arrowimg"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginTop="8dp"
         android:background="@drawable/left"
         app:layout_constraintBottom_toBottomOf="@+id/leftArrow"
         app:layout_constraintEnd_toEndOf="@+id/leftArrow"

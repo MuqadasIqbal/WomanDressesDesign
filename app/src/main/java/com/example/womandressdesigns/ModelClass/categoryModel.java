@@ -2,8 +2,11 @@ package com.example.womandressdesigns.ModelClass;
 
 public class categoryModel {
     private int image;
+    private String name;
 
-    public categoryModel() {
+    public categoryModel(int image, String name) {
+        this.image = image;
+        this.name = name;
     }
 
     public int getImage() {
@@ -14,7 +17,16 @@ public class categoryModel {
         this.image = image;
     }
 
-    public categoryModel(int image) {
-        this.image = image;
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public categoryModel() {
+    }
+
+
 }
