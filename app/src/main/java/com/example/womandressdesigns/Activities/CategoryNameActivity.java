@@ -39,10 +39,6 @@ public class CategoryNameActivity extends AppCompatActivity {
     ArrayList<SliderItem> slidermodel;
     String name;
 
-    int[] imageResources = {R.drawable.mandhidres, R.drawable.yeloowpinkmandhidress, R.drawable.greenmandhidress};
-
-    // Track the current image index
-    int currentImageIndex = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,9 +66,31 @@ public class CategoryNameActivity extends AppCompatActivity {
             slidermodel.add(new SliderItem(R.drawable.d));
             slidermodel.add(new SliderItem(R.drawable.bride));
         } else if (name.equals("Walima Dresses Designs")) {
+
+            slidermodel.add(new SliderItem(R.drawable.trendingmuslimbridal));
+            slidermodel.add(new SliderItem(R.drawable.couplewalimadress));
             slidermodel.add(new SliderItem(R.drawable.wilmapic));
-            slidermodel.add(new SliderItem(R.drawable.greenmandhidress));
-            slidermodel.add(new SliderItem(R.drawable.couplemandhidress));
+            slidermodel.add(new SliderItem(R.drawable.valimabridaloutfitsaretrending));
+            slidermodel.add(new SliderItem(R.drawable.valimabride));
+            slidermodel.add(new SliderItem(R.drawable.valimabridedressinspo));
+            slidermodel.add(new SliderItem(R.drawable.valimacouplegray));
+            slidermodel.add(new SliderItem(R.drawable.valimadress));
+            slidermodel.add(new SliderItem(R.drawable.valimaskfbridals));
+            slidermodel.add(new SliderItem(R.drawable.valimmalightpinkdress));
+            slidermodel.add(new SliderItem(R.drawable.walimaadresss));
+            slidermodel.add(new SliderItem(R.drawable.walimaalightbluedrs));
+            slidermodel.add(new SliderItem(R.drawable.walimaattractiveivory));
+            slidermodel.add(new SliderItem(R.drawable.waliabridal));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+
+
         } else if (name.equals("Party Dresses Designs")) {
             slidermodel.add(new SliderItem(R.drawable.party));
             slidermodel.add(new SliderItem(R.drawable.yeloowpinkmandhidress));
@@ -116,77 +134,9 @@ public class CategoryNameActivity extends AppCompatActivity {
             }
         });
 
-        //SaveImageToGallery
 
-       /* binding.savedimg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveToGallary();
-            }
-        });*/
-        binding.savedimg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveToGallery();
-            }
-        });
     }
 
-        private void saveToGallery() {
-
-            int currentImageResource = imageResources[currentImageIndex];
-
-            // Get the drawable corresponding to the current image resource
-            Drawable drawable = getResources().getDrawable(currentImageResource);
-
-            // Get the current image from the image slider
-          /*  Drawable drawable = binding.imageSlider.getCurrentPagePosition().getDrawable();*/
-           /* Drawable currentImage;
-            currentImage = binding.imageSlider.setCurrentPagePosition(adapter);*/
-
-            if (drawable instanceof BitmapDrawable) {
-                BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
-                Bitmap bitmap = bitmapDrawable.getBitmap();
-
-                OutputStream outputStream;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    ContentResolver resolver = getContentResolver();
-                    ContentValues contentValues = new ContentValues();
-                    contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, "image.jpg");
-                    contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg");
-                    contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/DressImages");
-
-                    Uri imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
-                    try {
-                        outputStream = resolver.openOutputStream(imageUri);
-                        if (outputStream != null) {
-                            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
-                            outputStream.close();
-                            Toast.makeText(CategoryNameActivity.this, "Image saved to gallery", Toast.LENGTH_SHORT).show();
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                    String imageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/DressImages";
-                    File dir = new File(imageDir);
-                    dir.mkdirs();
-                    String filename = String.format("%d.jpg", System.currentTimeMillis());
-                    File outFile = new File(dir, filename);
-
-                    try {
-                        outputStream = new FileOutputStream(outFile);
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
-                        outputStream.close();
-                        Toast.makeText(CategoryNameActivity.this, "Image saved to gallery", Toast.LENGTH_SHORT).show();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            } else {
-                // Handle the case when the current image is not a BitmapDrawable
-            }
-        }
     private void shareImageAndText(Bitmap image) {
         Uri uri=getImageToShare(image);
         Intent intent=new Intent(Intent.ACTION_SEND);
@@ -231,45 +181,6 @@ public class CategoryNameActivity extends AppCompatActivity {
     }
 
     }
-  /*  private void saveToGallary() {
-        BitmapDrawable bitmapDrawable = (BitmapDrawable) binding.imageSlider.getContext().getDrawable(R.drawable.bride);
-        Bitmap bitmap = bitmapDrawable.getBitmap();
 
-        OutputStream outputStream;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            ContentResolver resolver = getContentResolver();
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, "image.jpg");
-            contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg");
-            contentValues.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/DressImages");
-
-            Uri imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
-            try {
-                outputStream = resolver.openOutputStream(imageUri);
-                if (outputStream != null) {
-                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
-                    outputStream.close();
-                    Toast.makeText(CategoryNameActivity.this, "Image saved to gallery", Toast.LENGTH_SHORT).show();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            String imageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/DressImages";
-            File dir = new File(imageDir);
-            dir.mkdirs();
-            String filename = String.format("%d.jpg", System.currentTimeMillis());
-            File outFile = new File(dir, filename);
-
-            try {
-                outputStream = new FileOutputStream(outFile);
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
-                outputStream.close();
-                Toast.makeText(CategoryNameActivity.this, "Image saved to gallery", Toast.LENGTH_SHORT).show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }*/
 
 

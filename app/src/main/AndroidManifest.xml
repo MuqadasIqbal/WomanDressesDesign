@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,27 +16,29 @@
         android:theme="@style/Theme.WomanDressDesigns"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.CategoryActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Activities.SavedActivity"
-            android:exported="false"
-         >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Activities.CategoryNameActivity"
-            android:exported="false"
-          >
-
-
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Activities.HomeActivity"
-            android:exported="false"
-           >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -59,15 +63,16 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-    <provider
-        android:authorities="com.example.womandressdesigns.fileProvider"
-        android:name="androidx.core.content.FileProvider"
-        android:exported="false"
-        android:grantUriPermissions="true">
-        <meta-data
-            android:name="android.support.FILE_PROVIDER_PATHS"
-            android:resource="@xml/path"/>
-    </provider>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.womandressdesigns.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/path" />
+        </provider>
     </application>
 
 </manifest>

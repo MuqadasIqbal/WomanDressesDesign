@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.womandressdesigns.Activities.AllCategories;
+
 import com.example.womandressdesigns.Activities.CategoryNameActivity;
 import com.example.womandressdesigns.ModelClass.categoryModel;
 import com.example.womandressdesigns.R;
@@ -42,6 +42,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.viewHo
         holder.binding.categoryArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+              /*Intent intent=new Intent(context, CategoryNameActivity.class);
+                intent.putExtra("name",model.getName());
+                context.startActivity(intent);*/
                 Intent intent=new Intent(context, CategoryNameActivity.class);
                 intent.putExtra("name",model.getName());
                 context.startActivity(intent);

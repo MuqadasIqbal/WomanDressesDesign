@@ -49,7 +49,7 @@ ActivitySavedBinding binding;
                 values.put(MediaStore.Images.Media.DISPLAY_NAME, displayName);
                 values.put(MediaStore.Images.Media.MIME_TYPE, mimeType);
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     values.put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES);
                 } else {
                     String imagePath = Environment.getExternalStorageDirectory().toString() + File.separator + Environment.DIRECTORY_PICTURES;
@@ -68,10 +68,7 @@ ActivitySavedBinding binding;
                     e.printStackTrace();
                 }
 
-
-
-
-                Toast.makeText(SavedActivity.this, "Image Save", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SavedActivity.this, "Gallery Image Save", Toast.LENGTH_SHORT).show();
 
 
             }
