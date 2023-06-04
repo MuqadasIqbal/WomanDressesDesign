@@ -33,25 +33,21 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 
 public class CategoryNameActivity extends AppCompatActivity {
-
     ActivityCategoryNameBinding binding;
     private SliderAdapterExample adapter;
     ArrayList<SliderItem> slidermodel;
     String name;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityCategoryNameBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
         name = getIntent().getStringExtra("name");
         binding.categoryNameText.setText(name);
         slidermodel = new ArrayList<>();
 
         if (name.equals("Mandhi Dresses Designs")) {
-
             slidermodel.add(new SliderItem(R.drawable.mandhidres));
             slidermodel.add(new SliderItem(R.drawable.d));
             slidermodel.add(new SliderItem(R.drawable.greenmandhidress));
@@ -66,7 +62,6 @@ public class CategoryNameActivity extends AppCompatActivity {
             slidermodel.add(new SliderItem(R.drawable.d));
             slidermodel.add(new SliderItem(R.drawable.bride));
         } else if (name.equals("Walima Dresses Designs")) {
-
             slidermodel.add(new SliderItem(R.drawable.trendingmuslimbridal));
             slidermodel.add(new SliderItem(R.drawable.couplewalimadress));
             slidermodel.add(new SliderItem(R.drawable.wilmapic));
@@ -98,6 +93,61 @@ public class CategoryNameActivity extends AppCompatActivity {
             slidermodel.add(new SliderItem(R.drawable.walimadressescollection));
             slidermodel.add(new SliderItem(R.drawable.walimadressess));
             slidermodel.add(new SliderItem(R.drawable.walimadressskin));
+            slidermodel.add(new SliderItem(R.drawable.walimadresswedding));
+            slidermodel.add(new SliderItem(R.drawable.walimadresswhite));
+            slidermodel.add(new SliderItem(R.drawable.walimagreenbride));
+            slidermodel.add(new SliderItem(R.drawable.walimagreendresss));
+            slidermodel.add(new SliderItem(R.drawable.walimagresslightdress));
+            slidermodel.add(new SliderItem(R.drawable.walimahavedress));
+            slidermodel.add(new SliderItem(R.drawable.walimaheavydresssd));
+            slidermodel.add(new SliderItem(R.drawable.walimalightbluecolor));
+            slidermodel.add(new SliderItem(R.drawable.walimalightblueskinclor));
+            slidermodel.add(new SliderItem(R.drawable.walimalightclordress));
+            slidermodel.add(new SliderItem(R.drawable.walimalighttclordress));
+            slidermodel.add(new SliderItem(R.drawable.walimama));
+            slidermodel.add(new SliderItem(R.drawable.walimamuslimbridal));
+            slidermodel.add(new SliderItem(R.drawable.walimanavebluedress));
+            slidermodel.add(new SliderItem(R.drawable.walimanisanurmodaevi));
+            slidermodel.add(new SliderItem(R.drawable.walimaoffwhite));
+            slidermodel.add(new SliderItem(R.drawable.walimaorangrezafull));
+            slidermodel.add(new SliderItem(R.drawable.walimapinkdress));
+            slidermodel.add(new SliderItem(R.drawable.weddingdresses));
+            slidermodel.add(new SliderItem(R.drawable.walimashararadesign));
+        }
+        else if (name.equals("Party Dresses Designs")) {
+
+
+            slidermodel.add(new SliderItem(R.drawable.partylanghadesign));
+            slidermodel.add(new SliderItem(R.drawable.partylatestdesign));
+            slidermodel.add(new SliderItem(R.drawable.partylightbluedress));
+            slidermodel.add(new SliderItem(R.drawable.partyhijabdress));
+            slidermodel.add(new SliderItem(R.drawable.partylightcolordesign));
+            slidermodel.add(new SliderItem(R.drawable.partymaxi));
+            slidermodel.add(new SliderItem(R.drawable.partypichdrress));
+            slidermodel.add(new SliderItem(R.drawable.partypurplecoupledesignerdress));
+            slidermodel.add(new SliderItem(R.drawable.partyredblackdress));
+            slidermodel.add(new SliderItem(R.drawable.partyreddress));
+            slidermodel.add(new SliderItem(R.drawable.partyshortfroke));
+            slidermodel.add(new SliderItem(R.drawable.partyskinpeachdress));
+            slidermodel.add(new SliderItem(R.drawable.partystylishweardresforgirls));
+            slidermodel.add(new SliderItem(R.drawable.partysuitdesigning));
+            slidermodel.add(new SliderItem(R.drawable.partythreadsandmotifs));
+            slidermodel.add(new SliderItem(R.drawable.partyweardressesidea));
+            slidermodel.add(new SliderItem(R.drawable.partywearlongmaxidesign));
+            slidermodel.add(new SliderItem(R.drawable.partywhitebrowndress));
+            slidermodel.add(new SliderItem(R.drawable.partywhitedresss));
+            slidermodel.add(new SliderItem(R.drawable.partywhiteorangedress));
+            slidermodel.add(new SliderItem(R.drawable.partywholesale);
+            slidermodel.add(new SliderItem(R.drawable.partyyablueweddinggown));
+            slidermodel.add(new SliderItem(R.drawable.partytopdesign));
+            slidermodel.add(new SliderItem(R.drawable.weddingfunctiondressdesign));
+            slidermodel.add(new SliderItem(R.drawable.patyydress));
+            slidermodel.add(new SliderItem(R.drawable.partyydesignerdresses));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
             slidermodel.add(new SliderItem(R.drawable.));
             slidermodel.add(new SliderItem(R.drawable.));
             slidermodel.add(new SliderItem(R.drawable.));
@@ -127,10 +177,28 @@ public class CategoryNameActivity extends AppCompatActivity {
 
 
 
-        } else if (name.equals("Party Dresses Designs")) {
-            slidermodel.add(new SliderItem(R.drawable.party));
-            slidermodel.add(new SliderItem(R.drawable.yeloowpinkmandhidress));
-            slidermodel.add(new SliderItem(R.drawable.bride));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         } else {
             slidermodel.add(new SliderItem(R.drawable.mandhidres));
             slidermodel.add(new SliderItem(R.drawable.d));

@@ -37,7 +37,6 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         public Object instantiateItem(@NonNull ViewGroup container, int position) {
             ImageView imageView = new ImageView(container.getContext());
             imageView.setImageDrawable(images.get(position));
-
             container.addView(imageView);
             return imageView;
         }
