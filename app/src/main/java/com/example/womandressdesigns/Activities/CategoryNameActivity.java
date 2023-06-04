@@ -81,6 +81,23 @@ public class CategoryNameActivity extends AppCompatActivity {
             slidermodel.add(new SliderItem(R.drawable.walimaalightbluedrs));
             slidermodel.add(new SliderItem(R.drawable.walimaattractiveivory));
             slidermodel.add(new SliderItem(R.drawable.waliabridal));
+            slidermodel.add(new SliderItem(R.drawable.walimabeautifuldress));
+            slidermodel.add(new SliderItem(R.drawable.walimablackdress));
+            slidermodel.add(new SliderItem(R.drawable.walimablackpinkdress));
+            slidermodel.add(new SliderItem(R.drawable.walimabridalwear));
+            slidermodel.add(new SliderItem(R.drawable.walimabridedressinspo));
+            slidermodel.add(new SliderItem(R.drawable.walimabrowndress));
+            slidermodel.add(new SliderItem(R.drawable.walimacollection));
+            slidermodel.add(new SliderItem(R.drawable.walimacoupledesign));
+            slidermodel.add(new SliderItem(R.drawable.walimacoupledress));
+            slidermodel.add(new SliderItem(R.drawable.walimacoupleskindresss));
+            slidermodel.add(new SliderItem(R.drawable.walimadarkgreen));
+            slidermodel.add(new SliderItem(R.drawable.walimadresign));
+            slidermodel.add(new SliderItem(R.drawable.walimadress));
+            slidermodel.add(new SliderItem(R.drawable.walimadressaminakhan));
+            slidermodel.add(new SliderItem(R.drawable.walimadressescollection));
+            slidermodel.add(new SliderItem(R.drawable.walimadressess));
+            slidermodel.add(new SliderItem(R.drawable.walimadressskin));
             slidermodel.add(new SliderItem(R.drawable.));
             slidermodel.add(new SliderItem(R.drawable.));
             slidermodel.add(new SliderItem(R.drawable.));
@@ -89,6 +106,25 @@ public class CategoryNameActivity extends AppCompatActivity {
             slidermodel.add(new SliderItem(R.drawable.));
             slidermodel.add(new SliderItem(R.drawable.));
             slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+            slidermodel.add(new SliderItem(R.drawable.));
+
+
+
+
+
+
+
 
 
         } else if (name.equals("Party Dresses Designs")) {
